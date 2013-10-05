@@ -28,7 +28,7 @@ class MyPostsController extends \lithium\action\Controller {
             //with the outcome of the save attempt (bool)
             $saved = $my_post->save();
         }
-        return compact('saved');
+        return compact('saved', 'my_post');
     }
 
     public function view() {

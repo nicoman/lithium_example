@@ -6,7 +6,10 @@ namespace app\models;
 //All new models must extend the \lithium\data\Model class
 class MyPosts extends \lithium\data\Model {
 
-    //The MyPost class is intentionally empty right now
-
+    public $validates = array(
+        'title' => array(
+            array('notEmpty', 'message'=>'You must include a title.')
+        )
+    );
 }
 ?>
