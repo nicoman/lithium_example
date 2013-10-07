@@ -18,6 +18,11 @@ class MyPostsController extends \lithium\action\Controller {
     }
     
     public function add() {
+        //Check if user is authenticated, if not, redirect to login
+        if (!Auth::check('member', $this->request)) {
+            //User is not authenticated, redirect to login
+            return $this->redirect('/users/login/');
+        }
         //Assume save status is false
         $saved = false;
         //If we have any posted or querystring data...

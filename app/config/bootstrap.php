@@ -82,4 +82,9 @@ if (PHP_SAPI === 'cli') {
 	require __DIR__ . '/bootstrap/console.php';
 }
 
+/**
+ * Load auth
+ */
+require __DIR__ . '/bootstrap/auth.php';
+
 ?>
